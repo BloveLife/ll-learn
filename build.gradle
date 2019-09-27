@@ -1,0 +1,25 @@
+plugins {
+    id 'war'
+}
+
+allprojects {
+    group 'top.blove'
+    version '1.0.1'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    }
+
+    //指定编译的编码
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}
+
+dependencies {
+
+}
