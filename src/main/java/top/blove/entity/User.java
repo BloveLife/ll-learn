@@ -1,5 +1,8 @@
 package top.blove.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Desc:
  * User: Blove
@@ -7,6 +10,8 @@ package top.blove.entity;
  * Time: 15:00
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
+@Getter
+@Setter
 public class User extends BLCURDEntity {
     private static final long serialVersionUID = -1042994509787786106L;
 

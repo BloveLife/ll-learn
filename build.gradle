@@ -22,17 +22,27 @@ allprojects {
 
 ext {
     SPRING_V = "5.0.15.RELEASE"
-    SERVLET_V = "3.1.0"
+    SERVLET_V = "4.0.1"
     HUTOOL_V = "4.6.7"
     SLF4J_V = "1.7.28"
+    LOMBOK_V = "1.18.10"
+    MYBATIS_PLUS_V = "3.2.0"
 }
 
 dependencies {
     compile "org.springframework:spring-context:${SPRING_V}"
+
     compile "org.springframework:spring-web:${SPRING_V}"
     compile "org.springframework:spring-webmvc:${SPRING_V}"
-    compile "com.hynnet:javax.servlet-api:${SERVLET_V}"
+
+    compile "javax.servlet:javax.servlet-api:${SERVLET_V}"
+
     compile "cn.hutool:hutool-all:${HUTOOL_V}"
+
     compile "org.slf4j:slf4j-api:${SLF4J_V}"
     compile "org.slf4j:slf4j-log4j12:${SLF4J_V}"
+
+    compile "org.projectlombok:lombok:${LOMBOK_V}"
+
+    compile "com.baomidou:mybatis-plus:${MYBATIS_PLUS_V}"
 }

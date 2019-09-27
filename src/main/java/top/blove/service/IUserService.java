@@ -1,13 +1,13 @@
 package top.blove.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
+import top.blove.entity.User;
 
 /**
  * Desc:
  * User: Blove
  * Date: 2019/9/27
- * Time: 15:38
+ * Time: 18:29
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
-public interface IBLService<T> extends IService<T> {
+public interface IUserService extends IBLService<User> {
 }

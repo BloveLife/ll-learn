@@ -1,5 +1,7 @@
 package top.blove.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
 /**
  * Desc:
  * User: Blove
@@ -7,5 +9,5 @@ package top.blove.mapper;
  * Time: 15:37
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
-public interface IBLMapper {
+public interface BLMapper<T> extends BaseMapper<T> {
 }
