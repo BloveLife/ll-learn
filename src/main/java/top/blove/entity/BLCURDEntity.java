@@ -9,7 +9,7 @@ import java.util.Date;
  * Time: 15:00
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
-public class BLCRUDEntity extends BLEntity {
+public class BLCURDEntity extends BLEntity {
     private static final long serialVersionUID = 3389929084684304286L;
 
     private String createUser;

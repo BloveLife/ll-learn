@@ -20,6 +20,16 @@ allprojects {
     }
 }
 
-dependencies {
+ext {
+    SPRING_V = "5.0.15.RELEASE"
+    SERVLET_V = "3.1.0"
+    HUTOOL_V = "4.6.7"
+}
 
+dependencies {
+    compile "org.springframework:spring-context:${SPRING_V}"
+    compile "org.springframework:spring-web:${SPRING_V}"
+    compile "org.springframework:spring-webmvc:${SPRING_V}"
+    compile "com.hynnet:javax.servlet-api:${SERVLET_V}"
+    compile "cn.hutool:hutool-all:${HUTOOL_V}"
 }

@@ -7,7 +7,7 @@ package top.blove.entity;
  * Time: 15:00
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
-public class User extends BLCRUDEntity {
+public class User extends BLCURDEntity {
     private static final long serialVersionUID = -1042994509787786106L;
 
     private String name;
