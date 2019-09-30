@@ -1,5 +1,8 @@
 package top.blove.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
@@ -9,6 +12,8 @@ import java.io.Serializable;
  * Time: 15:00
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
+@Setter
+@Getter
 public class BLEntity implements Serializable {
     private static final long serialVersionUID = 8237276022130057105L;
 

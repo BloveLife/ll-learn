@@ -14,4 +14,10 @@ import top.blove.service.IUserService;
  */
 @Service
 public class UserService extends BLService<UserMapper, User> implements IUserService {
+
+    @Override
+    public User getUser() {
+        System.err.println("获取用户");
+        return new User();
+    }
 }

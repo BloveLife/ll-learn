@@ -10,4 +10,5 @@ import top.blove.entity.User;
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
 public interface IUserService extends IBLService<User> {
+    User getUser();
 }
