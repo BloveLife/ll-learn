@@ -3,6 +3,7 @@ package top.blove.web;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.date.DateTime;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import top.blove.entity.User;
@@ -18,6 +19,7 @@ import java.util.List;
  * Time: 15:38
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
+@Slf4j
 public class UserController extends BLController {
 
     public static void main(String[] args) {
@@ -26,6 +28,7 @@ public class UserController extends BLController {
         final User user = packUser();
         System.err.println(userService.save(user));
 
+        log.info("===================");
         System.err.println("最新成功添加的用户:" + userService.getUser(user.getId()));
 
         final List<User> users = userService.listUsers(user);
