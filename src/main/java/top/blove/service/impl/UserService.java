@@ -5,7 +5,6 @@ import top.blove.entity.User;
 import top.blove.mapper.UserMapper;
 import top.blove.service.IUserService;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,9 +16,6 @@ import java.util.List;
  */
 @Service
 public class UserService extends BLService<UserMapper, User> implements IUserService {
-    @Resource
-    private UserMapper userMapper;
-
     @Override
     public User getUser(final Long id) {
         return getById(id);
@@ -27,6 +23,6 @@ public class UserService extends BLService<UserMapper, User> implements IUserSer
 
     @Override
     public List<User> listUsers(final User user) {
-        return userMapper.listUsers(user);
+        return baseMapper.listUsers(user);
     }
 }
