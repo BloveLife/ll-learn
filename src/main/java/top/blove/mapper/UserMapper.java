@@ -12,4 +12,5 @@ import top.blove.entity.User;
  */
 @Repository
 public interface UserMapper extends BLMapper<User> {
+
 }

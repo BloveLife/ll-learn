@@ -27,7 +27,7 @@ ext {
     SLF4J_V = "1.7.28"
     LOMBOK_V = "1.18.10"
     MYBATIS_PLUS_V = "3.2.0"
-    MYSQL_V = "6.0.6"
+    MYSQL_V = "8.0.17"
     DBCP_V = "2.7.0"
 }
 

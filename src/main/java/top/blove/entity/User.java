@@ -1,5 +1,6 @@
 package top.blove.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@TableName("SYS_USER")
 public class User extends BLCURDEntity {
     private static final long serialVersionUID = -1042994509787786106L;
 
