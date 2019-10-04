@@ -12,10 +12,10 @@ import java.io.Serializable;
  * Time: 15:00
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
-@Setter
 @Getter
+@Setter
 public class BLEntity implements Serializable {
     private static final long serialVersionUID = 8237276022130057105L;
 
-    private Long id;
+    protected Long id;
 }

@@ -2,6 +2,8 @@ package top.blove.service;
 
 import top.blove.entity.User;
 
+import java.util.List;
+
 /**
  * Desc:
  * User: Blove
@@ -10,5 +12,7 @@ import top.blove.entity.User;
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
 public interface IUserService extends IBLService<User> {
-    User getUser();
+    User getUser(Long id);
+
+    List<User> listUsers(User user);
 }

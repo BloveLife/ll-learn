@@ -17,7 +17,7 @@ import java.util.Date;
 public class BLCURDEntity extends BLEntity {
     private static final long serialVersionUID = 3389929084684304286L;
 
-    private String createUser;
+    protected String createUser;
 
-    private Date createTime;
+    protected Date createTime;
 }

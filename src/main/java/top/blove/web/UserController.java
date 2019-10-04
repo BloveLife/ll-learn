@@ -1,5 +1,6 @@
 package top.blove.web;
 
+import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.date.DateTime;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import org.springframework.context.ApplicationContext;
@@ -7,6 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import top.blove.entity.User;
 import top.blove.service.IUserService;
 import top.blove.service.impl.UserService;
+
+import java.util.List;
 
 /**
  * Desc:
@@ -22,6 +25,13 @@ public class UserController extends BLController {
         final IUserService userService = (UserService) ctx.getBean("userService");
         final User user = packUser();
         System.err.println(userService.save(user));
+
+        System.err.println("最新成功添加的用户:" + userService.getUser(user.getId()));
+
+        final List<User> users = userService.listUsers(user);
+        if (CollectionUtil.isNotEmpty(users)) {
+            users.forEach(item -> System.err.println(item));
+        }
     }
 
     private static User packUser() {

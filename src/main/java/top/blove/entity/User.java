@@ -1,8 +1,7 @@
 package top.blove.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * Desc:
@@ -11,12 +10,22 @@ import lombok.Setter;
  * Time: 15:00
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
-@Getter
-@Setter
+@Data
 @TableName("SYS_USER")
 public class User extends BLCURDEntity {
     private static final long serialVersionUID = -1042994509787786106L;
 
     private String name;
     private Integer age;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", createUser='" + createUser + '\'' +
+                ", createTime=" + createTime +
+                ", id=" + id +
+                '}';
+    }
 }

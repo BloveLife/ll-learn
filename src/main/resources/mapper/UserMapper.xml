@@ -2,4 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="top.blove.mapper.UserMapper">
 
+    <select id="listUsers" resultType="top.blove.entity.User">
+        SELECT
+          <include refid="UserCols"/>
+        FROM SYS_USER U
+        <where>
+            1 = 1
+        </where>
+    </select>
+
+    <sql id="UserCols">
+        U.ID,
+        U.NAME,
+        U.AGE,
+        U.CREATE_USER,
+        U.CREATE_TIME
+    </sql>
 </mapper>
