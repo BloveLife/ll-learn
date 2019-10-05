@@ -1,5 +1,6 @@
 package top.blove.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,5 +20,6 @@ public class BLCURDEntity extends BLEntity {
 
     protected String createUser;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     protected Date createTime;
 }
