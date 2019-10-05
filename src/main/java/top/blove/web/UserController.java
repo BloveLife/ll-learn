@@ -6,10 +6,13 @@ import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import top.blove.entity.User;
 import top.blove.service.IUserService;
 import top.blove.service.impl.UserService;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -20,7 +23,12 @@ import java.util.List;
  * Mail:<a href="yanlong@hyphoneit.com">Yanlong</a>.
  */
 @Slf4j
+@RestController
+@RequestMapping(value = "/user")
 public class UserController extends BLController {
+
+    @Resource
+    private IUserService userService;
 
     public static void main(String[] args) {
         final ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:spring/api-server.xml");
@@ -45,5 +53,11 @@ public class UserController extends BLController {
         user.setCreateTime(DateTime.now());
         user.setCreateUser("Blove");
         return user;
+    }
+
+    @RequestMapping(value = "/getuser")
+    public User getUser() {
+        log.info("000000000000000");
+        return userService.getUser(1180131988741046273L);
     }
 }
