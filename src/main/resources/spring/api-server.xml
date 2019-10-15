@@ -16,14 +16,27 @@
     <context:property-placeholder location="classpath:properties/*.properties" system-properties-mode="FALLBACK"/>
 
     <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
+        <!--<property name="dataSource" ref="dataSource_jdbc"/>-->
+        <property name="dataSource" ref="dataSource_hikari"/>
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
     </bean>
 
-    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="driverClassName" value="${jdbc.driverClassName}"/>
-        <property name="url" value="${jdbc.url}"/>
-        <property name="username" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
+    <!--<bean id="dataSource_jdbc" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="${db.driverClassName}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>-->
+
+    <bean id="dataSource_hikari" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <property name="driverClassName" value="${db.driverClassName}"/>
+        <property name="jdbcUrl" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+        <property name="readOnly" value="${hikari.readOnly}"/>
+        <property name="connectionTimeout" value="${hikari.connectionTimeout}"/>
+        <property name="idleTimeout" value="${hikari.idleTimeout}"/>
+        <property name="maxLifetime" value="${hikari.maxLifetime}"/>
+        <property name="maximumPoolSize" value="${hikari.maximumPoolSize}"/>
     </bean>
 </beans>

@@ -29,27 +29,32 @@ ext {
     MYBATIS_PLUS_V = "3.2.0"
     MYSQL_V = "8.0.17"
     DBCP_V = "2.7.0"
+    HIKARICP_V = "3.4.1"
     JACKSON_V = "2.10.0"
 }
 
 dependencies {
+//    spring
     compile "org.springframework:spring-context:${SPRING_V}"
-
+//    web
     compile "javax.servlet:javax.servlet-api:${SERVLET_V}"
     compile "org.springframework:spring-web:${SPRING_V}"
     compile "org.springframework:spring-webmvc:${SPRING_V}"
-
+//    json
     compile "com.fasterxml.jackson.core:jackson-databind:${JACKSON_V}"
-
+//    log4j
     compile "org.slf4j:slf4j-api:${SLF4J_V}"
     compile "org.slf4j:slf4j-log4j12:${SLF4J_V}"
-
+//    mysql数据库
     compile "mysql:mysql-connector-java:${MYSQL_V}"
-    compile "org.apache.commons:commons-dbcp2:${DBCP_V}"
     compile "com.baomidou:mybatis-plus:${MYBATIS_PLUS_V}"
     compile "org.springframework:spring-tx:${SPRING_V}"
     compile "org.springframework:spring-jdbc:${SPRING_V}"
+//    数据库连接池(多选一)
+//    compile "org.apache.commons:commons-dbcp2:${DBCP_V}"
+    compile "com.zaxxer:HikariCP:${HIKARICP_V}"
 
+//    工具
     compile "cn.hutool:hutool-all:${HUTOOL_V}"
     compile "org.projectlombok:lombok:${LOMBOK_V}"
 }

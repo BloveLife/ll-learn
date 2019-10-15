@@ -1,5 +1,6 @@
 package top.blove.entity;
 
+import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -24,7 +25,7 @@ public class User extends BLCURDEntity {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", createUser='" + createUser + '\'' +
-                ", createTime=" + createTime +
+                ", createTime=" + DateUtil.formatDateTime(createTime) +
                 ", id=" + id +
                 '}';
     }

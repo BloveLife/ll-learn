@@ -35,6 +35,8 @@ public class UserController extends BLController {
         final IUserService userService = (UserService) ctx.getBean("userService");
         final User user = saveUser(userService);
 
+        System.err.println("========创建完成========");
+
         listUsers(userService, user);
     }
 
