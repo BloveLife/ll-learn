@@ -12,5 +12,9 @@
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
     </context:component-scan>
 
+    <mvc:cors>
+        <mvc:mapping path="/**"/>
+    </mvc:cors>
+
     <mvc:default-servlet-handler/>
 </beans>
