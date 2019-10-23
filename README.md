@@ -1,2 +1,2 @@
-# bl-life
-人生的CEO
+# ll-learn
+Live to learn old
