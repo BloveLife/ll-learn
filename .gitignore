@@ -1,0 +1,6 @@
+out
+gradle
+.gradle
+/gradlew
+/build
+/gradlew.bat
