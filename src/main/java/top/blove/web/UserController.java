@@ -5,6 +5,7 @@ import cn.hutool.core.date.DateTime;
 import cn.hutool.core.util.ObjectUtil;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,11 +34,16 @@ public class UserController extends BLController {
     public static void main(String[] args) {
         final ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:spring/api-server.xml");
         final IUserService userService = (UserService) ctx.getBean("userService");
-        final User user = saveUser(userService);
+        log.debug("debug日志级别");
+        log.info("info日志级别");
+        log.warn("warn日志级别");
+        log.error("error日志级别");
 
-        System.err.println("========创建完成========");
-
-        listUsers(userService, user);
+//        final User user = saveUser(userService);
+//
+//        System.err.println("========创建完成========");
+//
+//        listUsers(userService, user);
     }
 
     private static void listUsers(final IUserService userService, final User user) {
