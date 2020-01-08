@@ -39,11 +39,11 @@ public class UserController extends BLController {
         log.warn("warn日志级别");
         log.error("error日志级别");
 
-//        final User user = saveUser(userService);
+        final User user = saveUser(userService);
+
+        System.err.println("========创建完成========");
 //
-//        System.err.println("========创建完成========");
-//
-//        listUsers(userService, user);
+        listUsers(userService, user);
     }
 
     private static void listUsers(final IUserService userService, final User user) {
