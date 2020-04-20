@@ -51,8 +51,8 @@ dependencies {
     compile "org.springframework:spring-tx:${SPRING_V}"
     compile "org.springframework:spring-jdbc:${SPRING_V}"
 //    数据库连接池
-//    compile "org.apache.commons:commons-dbcp2:${DBCP_V}"
-    compile "com.zaxxer:HikariCP:${HIKARICP_V}"
+    compile "org.apache.commons:commons-dbcp2:${DBCP_V}"
+//    compile "com.zaxxer:HikariCP:${HIKARICP_V}"
 
 //    工具
     compile "cn.hutool:hutool-all:${HUTOOL_V}"
