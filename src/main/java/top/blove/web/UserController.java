@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.blove.entity.User;
@@ -78,7 +79,7 @@ public class UserController extends BLController {
         return userService.getUser(user.getId());
     }
 
-    @RequestMapping("/list")
+    @GetMapping("/list")
     public List<User> listUsers(final User user) {
         final List<User> users = userService.listUsers(user);
         log.info("创建时间:" + users.get(0).getCreateTime());
